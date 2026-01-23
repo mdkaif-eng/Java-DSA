@@ -22,7 +22,7 @@ public class binarySearch8{
     }
 
         public static void main (String []args){
-            int numbers[] = {2,4,6,8,10,12,14};
+            int numbers[] = {2,4,6,8,10,12,14};   
             int key = 6;
             System.out.println("index for key is : "+ binarySearch(numbers,key));
         }
