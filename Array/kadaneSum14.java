@@ -1,6 +1,8 @@
-//sum of prefix array
-    import java.util.*;
-public class Maxsubarraysum13 {
+
+        import java.util.*;
+
+public class kadaneSum14 {
+    
      public static void maxsubarraySum(int numbers[]){
         int currSum = 0;
         int maxSum = Integer.MIN_VALUE;
@@ -29,13 +31,25 @@ public class Maxsubarraysum13 {
             }
         }
             System.out.println("max sum of subarrays :" + maxSum);
+    }
+    //kadanes code 
+            public static void kadanes(int numbers[]){
+                int ms = Integer.MIN_VALUE;
+                int cs = 0;
+                for(int i = 0; i<numbers.length; i++){
+                    cs  = cs + numbers[i];
+                    if(cs < 0){
+                        cs = 0;
+                    }
+                    ms = Math.max(cs, ms);
+                }
+                System.out.println("our max sub array sum is : " + ms);
 
-     }
+            }
 
+     
     public static void main (String args[]){
-        int numbers[] = {1,-2,6,-1,3};
-        maxsubarraySum(numbers);
+        int numbers[] = {-2,-3,4,-1,-2,1,5,-3};
+        kadanes(numbers);
     }
 }
-    
-
