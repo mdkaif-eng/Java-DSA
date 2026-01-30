@@ -1,10 +1,10 @@
-import java.util.*;
+import java.util.*; 
 public class TrappingRainwater{
     public static int trappedRainwater(int height[]){
         int n = height.length;
         //calculate left max boundary - array
         int leftMax[] = new int [n];
-        leftMax[0] = height[0];
+        leftMax[0] = height[0];  
 
         for(int i = 1; i < height.length ; i++){
             leftMax[i] = Math.max(height[i], leftMax[i - 1]);
